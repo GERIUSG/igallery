@@ -27,7 +27,6 @@ Publish the website in the given URL.
 ## PROGRAM :
 ```
 gallery.html
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,6 +62,29 @@ gallery.html
         <p>
             © DESIGNED BY: GERIUS G</p>
     </footer>
+    <script>
+        const allPhotos = document.querySelectorAll('.gallery');
+        const viewer = document.querySelector('.viewer');
+        const viewerImage = viewer.querySelector('gallery');
+        const closeBtn = viewer.querySelector('.close-btn');
+    
+        allPhotos.forEach((img) => {
+            img.addEventListener('click', function() {
+                viewer.style.display = 'flex';
+                viewerImage.src = this.src;
+            });
+        });
+    
+        closeBtn.addEventListener('click', (gallery) => {
+            viewer.style.display = 'none';
+        });
+    
+        viewer.addEventListener('click', (gallery) => {
+            if (e.target === viewer) {
+                viewer.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
 
@@ -130,7 +152,7 @@ footer {
 ```
 
 ## OUTPUT:
-![alt text](<Screenshot (85).png>)
+
 
 ## RESULT:
 The program for designing an interactive image gallery using HTML, CSS and JavaScript is executed successfully.
