@@ -152,7 +152,7 @@ footer {
 ```
 
 ## OUTPUT:
-![alt text](<Screenshot (86)-1.png>)
+![alt text](<Screenshot (87)-1.png>)
 
 ## RESULT:
 The program for designing an interactive image gallery using HTML, CSS and JavaScript is executed successfully.
